@@ -40,7 +40,7 @@ export function canExecuteFastAttack(knightIsAwake) {
  * @returns {boolean} Whether or not you can spy on someone.
  */
 export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
-	return !knightIsAwake && archerIsAwake && !prisonerIsAwake;
+	return knightIsAwake || archerIsAwake || prisonerIsAwake;
 }
 
 /**
@@ -66,5 +66,7 @@ export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
  * @returns {boolean} Whether or not you can free Annalyn's friend.
  */
 export function canFreePrisoner(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent) {
-	return !knightIsAwake && archerIsAwake && !prisonerIsAwake && !petDogIsPresent;
+	const prisonerAwake = prisonerIsAwake && !knightIsAwake && !archerIsAwake;
+	const dogPresent = !archerIsAwake && petDogIsPresent;
+	return prisonerAwake || dogPresent;
 }
