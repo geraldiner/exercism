@@ -53,11 +53,10 @@ export function monitorTheMachine({ check, alertDeadSensor, alertOverheating, sh
 	try {
 		check();
 	} catch (error) {
-		if (ArgumentError) {
+		if (error instanceof ArgumentError) {
 			alertDeadSensor();
-		} else if (OverheatingError) {
-			console.log(OverheatingError.arguments);
-			if (OverheatingError.arguments[0] > 600) {
+		} else if (error instanceof OverheatingError) {
+			if (error.temperature > 600) {
 				shutdown();
 			} else {
 				alertOverheating();
