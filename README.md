@@ -1,6 +1,6 @@
 ## About
 
-A repo for holding all the exercises on [Exercism](https://exercism.org).
+A repo for holding all the exercises I complete on [Exercism](https://exercism.org).
 
 ## Other Projects
 
