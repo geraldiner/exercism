@@ -2,6 +2,7 @@
 
 A repo for holding all the exercises I complete on [Exercism](https://exercism.org).
 
+
 ## Other Projects
 
 Check out other stuff I've worked on:
@@ -13,5 +14,3 @@ Check out other stuff I've worked on:
 **Snapchat Clone:** https://github.com/geraldiner/snapchat-clone
 
 **K.K. Radio:** https://github.com/geraldiner/kk-radio
-
-**Interactive Piano:** https://github.com/geraldiner/piano
